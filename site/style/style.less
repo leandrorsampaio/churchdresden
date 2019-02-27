@@ -863,15 +863,27 @@ p {
 			justify-content: space-between;
 			margin: 0 auto;
 			padding: 50px 20px;
+			box-sizing: border-box;
+			@media screen and (max-width: @mobile-max) {
+				display: flex;
+				flex-direction: column;
+			}
 			.footerlogos-item {
 				width: 50%;
 				&.logo-gge {
 					width: 45%;
+					@media screen and (max-width: @mobile-max) {
+						width: 80%;
+					}
 				}
 				&.logo-ksp {
 					background: @white;
 					padding: 15px;
 					width: 40%;
+					@media screen and (max-width: @mobile-max) {
+						width: 80%;
+						margin-top: 30px;
+					}
 				}
 			}
 		}
@@ -951,4 +963,11 @@ p {
 
 .sssprev:hover, .sssnext:hover {
 	cursor: pointer;
+}
+
+
+
+
+.donation-wraper-text p {
+	padding: 0 30px;
 }
