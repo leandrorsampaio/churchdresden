@@ -1,13 +1,17 @@
 @import "reset";
 @import "variables";
 
-
+* {
+  box-sizing: border-box;
+}
 body {
 	color: @grey-1;
 	font-family: 'Archivo', sans-serif;
-	background: @orange-2; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, @orange-2, @orange-1); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, @orange-2, @orange-1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #ffffff;
+	box-sizing: border-box;
+	//background: @orange-2; /* fallback for old browsers */
+	//background: -webkit-linear-gradient(to right, @orange-2, @orange-1); /* Chrome 10-25, Safari 5.1-6 */
+	//background: linear-gradient(to right, @orange-2, @orange-1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 img {
 	width: 100%;
@@ -68,6 +72,7 @@ p {
 .col-wrapper {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	@media screen and (max-width: @mobile-max) {
 		flex-direction: column;
 	}
@@ -91,6 +96,12 @@ p {
 	}
 	.col-30 {
 		width: 30%;
+		@media screen and (max-width: @mobile-max) {
+			width: 100%;
+		}
+	}
+	.col-33 {
+		width: 33.333333332%;
 		@media screen and (max-width: @mobile-max) {
 			width: 100%;
 		}
@@ -359,6 +370,14 @@ p {
 							font-size: 25px;
 							&:hover, &:focus {
 								color: @blue-facebook;
+							}
+						}
+					}
+					&.instagran {
+						a {
+							font-size: 25px;
+							&:hover, &:focus {
+								color: @purple-instagran;
 							}
 						}
 					}
@@ -759,9 +778,12 @@ p {
 
 
 .smallgroups {
+	.smallgroups-col {
+		margin-left: -30px;
+	}
 	.smallgroups-wraper {
 		.smallgroups-wraper-item {
-			padding: 0 30px;
+			padding: 0 0 45px 30px;
 			@media screen and (max-width: @mobile-max) {
 				padding: 0 0;
 			}
