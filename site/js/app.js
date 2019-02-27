@@ -167,10 +167,10 @@ function languageSelection() {
 // Run on load
 $(window).on('load', function () {
 	//sectionSize();
+	languageStart();
 	smoothScroll();
 	menuMobile();
 	languageMenuMobile();
-	languageStart();
 	languageSelection();
 });
 
