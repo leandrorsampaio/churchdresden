@@ -1,128 +1,23 @@
+<?php
+get_header();
 
 
 
-
-
-		<nav class="navigation">
-			<div class="navigation-wrapper">
-				<div class="logo">
-					<a href="index.html">
-						Church Dresden
-					</a>
-				</div>
-				<div class="menu">
-					<span class="menu-mobile-button">
-						<i class="fa fa-bars" aria-hidden="true"></i>
-					</span>
-					<span class="language-mobile-button">
-						<i class="fa fa-language" aria-hidden="true"></i>
-					</span>
-					<ul>
-						<li>
-							<a href="#service">
-								<span class="translated-content lang-de">Die Kirche</span>
-								<span class="translated-content lang-en">The Church</span>
-								<span class="translated-content lang-es">La Iglesia</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#smallgroups">
-								<span class="translated-content lang-de">Kleine Gruppen</span>
-								<span class="translated-content lang-en">Small groups</span>
-								<span class="translated-content lang-es">Pequeños grupos</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#salvationplan">
-								<span class="translated-content lang-de">Die Geschichte</span>
-								<span class="translated-content lang-en">The History</span>
-								<span class="translated-content lang-es">La Historia</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#about">
-								<span class="translated-content lang-de">Über uns</span>
-								<span class="translated-content lang-en">About Us</span>
-								<span class="translated-content lang-es">Quem Somos</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#map">
-								<span class="translated-content lang-de">Wo wir sind</span>
-								<span class="translated-content lang-en">Where we are</span>
-								<span class="translated-content lang-es">Donde estamos</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#donation">
-								<span class="translated-content lang-de">Spenden</span>
-								<span class="translated-content lang-en">Donation</span>
-								<span class="translated-content lang-es">Donación</span>
-							</a>
-						</li>
-						<li>
-							<a href="#contact">
-								<span class="translated-content lang-de">Kontakt</span>
-								<span class="translated-content lang-en">Contact</span>
-								<span class="translated-content lang-es">Contacto</span>
-							</a>
-						</li>
-						<li class="facebook">
-							<a href="https://www.facebook.com/GiAProjekt/" target="_blank">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li class="instagran">
-							<a href="https://www.instagram.com/churchdresden/" target="_blank">
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+if ( have_posts() ) {
+	while ( have_posts() ) {
+		the_post();
+		//
+		// Post Content here
+		//
+	} // end while
+} // end if
 
 
 
+?>
 
 
 
-
-		<nav class="language">
-			<div class="language-menu">
-				<ul>
-					<li class="flag_de">
-						<span class="flag_link flag_link_de">
-							<img src="images/flag_de.png" alt="Flag German Language"/>
-							<span class="text">
-								German
-							</span>
-						</span>
-					</li>
-					<li class="flag_en">
-						<span class="flag_link flag_link_en">
-							<img src="images/flag_en.png" alt="Flag English Language"/>
-							<span class="text">
-								English
-							</span>
-						</span>
-					</li>
-					<li class="flag_es">
-						<span class="flag_link flag_link_es">
-							<img src="images/flag_es.png" alt="Flag Spanish Language"/>
-							<span class="text">
-								Spanish
-							</span>
-						</span>
-					</li>
-				</ul>
-			</div>
-		</nav>
 
 
 
@@ -141,7 +36,7 @@
 
 
 					<div>
-						<img src="content/slider_1.jpg" />
+						<img src="<?php bloginfo('template_url'); ?>content/slider_1.jpg" />
 
 						<div class="slider-item title">
 							<div class="bibleverse">
@@ -161,9 +56,9 @@
 
 					</div>
 
-					<img src="content/slider_4.jpg" />
-					<img src="content/slider_7.jpg" />
-					<img src="content/slider_6.jpg" />
+					<img src="<?php bloginfo('template_url'); ?>content/slider_4.jpg" />
+					<img src="<?php bloginfo('template_url'); ?>content/slider_7.jpg" />
+					<img src="<?php bloginfo('template_url'); ?>content/slider_6.jpg" />
 
 				</div>
 
@@ -184,7 +79,207 @@
 
 
 
+<?php
 
+	//
+	//
+	//
+	// The Church
+	$argsthechurch = array(
+		'p' => 13,
+		'post_type' => 'pty_interface'
+		);
+	$thechurch = new WP_Query( $argsthechurch );
+	while ($thechurch->have_posts()) : $thechurch->the_post();
+
+		$the_church_text_de = get_field(the_church_text_de);
+		$the_church_agenda_de = get_field(the_church_agenda_de);
+		//
+		$the_church_text_en = get_field(the_church_text_en);
+		$the_church_agenda_en = get_field(the_church_agenda_en);
+		//
+		$the_church_text_es = get_field(the_church_text_es);
+		$the_church_agenda_es = get_field(the_church_agenda_es);
+
+	endwhile;
+	wp_reset_query();
+
+
+	//
+	//
+	//
+	// Small Groups
+	$argsthechurch = array(
+		'p' => 13,
+		'post_type' => 'pty_interface'
+		);
+	$thechurch = new WP_Query( $argsthechurch );
+	while ($thechurch->have_posts()) : $thechurch->the_post();
+
+		$small_groups_image_01 = get_field(small_groups_image_01);
+		$small_groups_image_02 = get_field(small_groups_image_02);
+		$small_groups_image_03 = get_field(small_groups_image_03);
+		$small_groups_image_04 = get_field(small_groups_image_04);
+		$small_groups_image_05 = get_field(small_groups_image_05);
+		$small_groups_image_06 = get_field(small_groups_image_06);
+		//
+		//
+		//
+		$small_groups_title_de_01 = get_field(small_groups_title_de_01);
+		$small_groups_title_de_02 = get_field(small_groups_title_de_02);
+		$small_groups_title_de_03 = get_field(small_groups_title_de_03);
+		$small_groups_title_de_04 = get_field(small_groups_title_de_04);
+		$small_groups_title_de_05 = get_field(small_groups_title_de_05);
+		$small_groups_title_de_06 = get_field(small_groups_title_de_06);
+		//
+		$small_groups_text_de_01 = get_field(small_groups_text_de_01);
+		$small_groups_text_de_02 = get_field(small_groups_text_de_02);
+		$small_groups_text_de_03 = get_field(small_groups_text_de_03);
+		$small_groups_text_de_04 = get_field(small_groups_text_de_04);
+		$small_groups_text_de_05 = get_field(small_groups_text_de_05);
+		$small_groups_text_de_06 = get_field(small_groups_text_de_06);
+		//
+		//
+		//
+		$small_groups_title_en_01 = get_field(small_groups_title_en_01);
+		$small_groups_title_en_02 = get_field(small_groups_title_en_02);
+		$small_groups_title_en_03 = get_field(small_groups_title_en_03);
+		$small_groups_title_en_04 = get_field(small_groups_title_en_04);
+		$small_groups_title_en_05 = get_field(small_groups_title_en_05);
+		$small_groups_title_en_06 = get_field(small_groups_title_en_06);
+		//
+		$small_groups_text_en_01 = get_field(small_groups_text_en_01);
+		$small_groups_text_en_02 = get_field(small_groups_text_en_02);
+		$small_groups_text_en_03 = get_field(small_groups_text_en_03);
+		$small_groups_text_en_04 = get_field(small_groups_text_en_04);
+		$small_groups_text_en_05 = get_field(small_groups_text_en_05);
+		$small_groups_text_en_06 = get_field(small_groups_text_en_06);
+		//
+		//
+		//
+		$small_groups_title_es_01 = get_field(small_groups_title_es_01);
+		$small_groups_title_es_02 = get_field(small_groups_title_es_02);
+		$small_groups_title_es_03 = get_field(small_groups_title_es_03);
+		$small_groups_title_es_04 = get_field(small_groups_title_es_04);
+		$small_groups_title_es_05 = get_field(small_groups_title_es_05);
+		$small_groups_title_es_06 = get_field(small_groups_title_es_06);
+		//
+		$small_groups_text_es_01 = get_field(small_groups_text_es_01);
+		$small_groups_text_es_02 = get_field(small_groups_text_es_02);
+		$small_groups_text_es_03 = get_field(small_groups_text_es_03);
+		$small_groups_text_es_04 = get_field(small_groups_text_es_04);
+		$small_groups_text_es_05 = get_field(small_groups_text_es_05);
+		$small_groups_text_es_06 = get_field(small_groups_text_es_06);
+
+
+	endwhile;
+	wp_reset_query();
+
+
+
+
+
+
+
+	//
+	//
+	//
+	// About US
+	$argsthechurch = array(
+		'p' => 13,
+		'post_type' => 'pty_interface'
+		);
+	$thechurch = new WP_Query( $argsthechurch );
+	while ($thechurch->have_posts()) : $thechurch->the_post();
+
+		$about_us_image_de = get_field(about_us_image_de);
+		$about_us_text_de = get_field(about_us_text_de);
+		//
+		$about_us_image_en = get_field(about_us_image_en);
+		$about_us_text_en = get_field(about_us_text_en);
+		//
+		$about_us_image_es = get_field(about_us_image_es);
+		$about_us_text_es = get_field(about_us_text_es);
+
+	endwhile;
+	wp_reset_query();
+
+
+
+
+
+	//
+	//
+	//
+	// Where We Are
+	$argsthechurch = array(
+		'p' => 13,
+		'post_type' => 'pty_interface'
+		);
+	$thechurch = new WP_Query( $argsthechurch );
+	while ($thechurch->have_posts()) : $thechurch->the_post();
+
+		$where_text_de = get_field(where_text_de);
+		$where_text_en = get_field(where_text_en);
+		$where_text_es = get_field(where_text_es);
+
+	endwhile;
+	wp_reset_query();
+
+
+
+
+	//
+	//
+	//
+	// Donate
+	$argsthechurch = array(
+		'p' => 13,
+		'post_type' => 'pty_interface'
+		);
+	$thechurch = new WP_Query( $argsthechurch );
+	while ($thechurch->have_posts()) : $thechurch->the_post();
+
+		$donation_image_de = get_field(donation_image_de);
+		$donation_text_de = get_field(donation_text_de);
+		//
+		$donation_image_en = get_field(donation_image_en);
+		$donation_text_en = get_field(donation_text_en);
+		//
+		$donation_text_es = get_field(donation_image_es);
+		$donation_text_es = get_field(donation_text_es);
+
+	endwhile;
+	wp_reset_query();
+
+
+
+
+	//
+	//
+	//
+	// Contact
+	$argsthechurch = array(
+		'p' => 13,
+		'post_type' => 'pty_interface'
+		);
+	$thechurch = new WP_Query( $argsthechurch );
+	while ($thechurch->have_posts()) : $thechurch->the_post();
+
+		$contact_image_michael = get_field(contact_image_michael);
+		$contact_email_michael = get_field(contact_email_michael);
+		$contact_image_tobi = get_field(contact_image_tobi);
+		$contact_email_tobi = get_field(contact_email_tobi);
+		//
+		$contact_text_de = get_field(contact_text_de);
+		$contact_text_en = get_field(contact_text_en);
+		$contact_text_es = get_field(contact_text_es);
+
+	endwhile;
+	wp_reset_query();
+
+
+?>
 
 
 
@@ -202,52 +297,13 @@
 				<div class="col-wrapper">
 					<div class="col-70">
 						<span class="translated-content lang-de">
-							<p>
-								Die Internationale Gemeinde gehört zu der ev.-luth. St.-Pauli-Gemeinde im Kirchspiel Dresden-Neustadt und bietet jeden 1. und 3. Sonntag im Monat: 16:30Uhr, moderne Gottesdienst mit deutscher, englischer uns spanischer Übersetzung an.
-							</p>
-							<h4 class="sub-title">Was wir mit internationalem Gottesdienst meinen:</h4>
-							<p>
-								- Eine Zeit zum runter kommen um in einer Stressigen Welt einfach mal auf die Stimne deines Herzens zu hören.
-								<br />- einen  spirituellen Way of Life suchen
-								<br />- Eine Zeit in der du erleben kannst, dass du geliebt bist, es eine Hoffnung und einen göttlichen guten Plan für dein Leben gibt.
-								<br />- Neue Freunde finden, Spaß haben und Teil der internationalen Familie werden
-							</p>
-							<br />
-							<p class="bold">
-								Herzlich willkommen!
-							</p>
+							<?php echo $the_church_text_de; ?>
 						</span>
 						<span class="translated-content lang-en">
-							<p>
-								The international congregation belongs to the Protestant Lutheran congregation St. Pauli in the parish of Dresden-Neustadt and offers modern services with German, English and Spanish translations every 1st and 3rd Sunday of the month 4:30p.m..
-							</p>
-							<h4 class="sub-title">What does sunday service mean:</h4>
-							<p>
-								- A time to come down, chill out and listen to the voice of your heart in such a busy world
-								<br />- Searching the spiritual way of life
-								<br />- A time to experience that you are loved, you have hope and there is a divine plan for your life
-								<br />- Find new friends, have fun and become part of the international family
-							</p>
-							<br />
-							<p class="bold">
-								Be very welcome!
-							</p>
+							<?php echo $the_church_text_en; ?>
 						</span>
 						<span class="translated-content lang-es">
-							<p>
-								La comunidad internacional pertenece a la Protestante Lutheran congregation St. Pauli en la parro de Dresde-Neustadt y ofrece servicios de modernidad con German, English y Spanish translations cada uno y el tercer domingo de los meses 4:30 p.m ..
-							</p>
-							<h4 class="sub-title">Lo que el culto dominical significa:</h4>
-							<p>
-								- Un tiempo para desacelerar, relajar y oír la voz de su corazón en medio de un mundo tan agitado
-								<br />- Buscar un camino espiritual de vida
-								<br />- Un tiempo para experimentar que usted es amado, que existe esperanza y hay un plan divino para su vida
-								<br />- Encuentrar nuevos amigos, diviértete y forma parte de esa familia internacional
-							</p>
-							<br />
-							<p class="bold">
-								¡Sea muy bienvenido!
-							</p>
+							<?php echo $the_church_text_es; ?>
 						</span>
 
 
@@ -266,30 +322,22 @@
 						</span>
 						<span class="translated-content lang-es">
 							<p class="bold center list-services-title">
-								ES Not Translated
+								Próximos servicios:
 							</p>
 						</span>
 
-						<ul class="list-services-dates">
-							<li>
-								<p>03/03/2019</p>
-							</li>
-							<li>
-								<p>17/03/2019</p>
-							</li>
-							<li>
-								<p>07/04/2019</p>
-							</li>
-							<li>
-								<p>21/04/2019</p>
-							</li>
-							<li>
-								<p>05/05/2019</p>
-							</li>
-							<li>
-								<p>19/05/2019</p>
-							</li>
-						</ul>
+
+						<span class="translated-content lang-de">
+							<?php echo $the_church_agenda_de; ?>
+						</span>
+						<span class="translated-content lang-en">
+							<?php echo $the_church_agenda_en; ?>
+						</span>
+						<span class="translated-content lang-es">
+							<?php echo $the_church_agenda_es; ?>
+						</span>
+
+
 					</div>
 				</div>
 
@@ -621,11 +669,6 @@
 		</section>
 
 
-
-
-
-
-
-
-
-		
+		<?php
+		get_footer();
+		?>
