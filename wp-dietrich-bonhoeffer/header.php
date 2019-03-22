@@ -144,7 +144,7 @@
 				<ul>
 					<li class="flag_de">
 						<span class="flag_link flag_link_de">
-							<img src="<?php bloginfo('template_url'); ?>images/flag_de.png" alt="Flag German Language"/>
+							<img src="<?php bloginfo('template_url'); ?>/images/flag_de.png" alt="Flag German Language"/>
 							<span class="text">
 								German
 							</span>
@@ -152,7 +152,7 @@
 					</li>
 					<li class="flag_en">
 						<span class="flag_link flag_link_en">
-							<img src="<?php bloginfo('template_url'); ?>images/flag_en.png" alt="Flag English Language"/>
+							<img src="<?php bloginfo('template_url'); ?>/images/flag_en.png" alt="Flag English Language"/>
 							<span class="text">
 								English
 							</span>
@@ -160,7 +160,7 @@
 					</li>
 					<li class="flag_es">
 						<span class="flag_link flag_link_es">
-							<img src="<?php bloginfo('template_url'); ?>images/flag_es.png" alt="Flag Spanish Language"/>
+							<img src="<?php bloginfo('template_url'); ?>/images/flag_es.png" alt="Flag Spanish Language"/>
 							<span class="text">
 								Spanish
 							</span>

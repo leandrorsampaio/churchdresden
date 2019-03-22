@@ -36,7 +36,7 @@ if ( have_posts() ) {
 
 
 					<div>
-						<img src="<?php bloginfo('template_url'); ?>content/slider_1.jpg" />
+						<img src="<?php bloginfo('template_url'); ?>/content/slider_1.jpg" />
 
 						<div class="slider-item title">
 							<div class="bibleverse">
@@ -56,9 +56,9 @@ if ( have_posts() ) {
 
 					</div>
 
-					<img src="<?php bloginfo('template_url'); ?>content/slider_4.jpg" />
-					<img src="<?php bloginfo('template_url'); ?>content/slider_7.jpg" />
-					<img src="<?php bloginfo('template_url'); ?>content/slider_6.jpg" />
+					<img src="<?php bloginfo('template_url'); ?>/content/slider_4.jpg" />
+					<img src="<?php bloginfo('template_url'); ?>/content/slider_7.jpg" />
+					<img src="<?php bloginfo('template_url'); ?>/content/slider_6.jpg" />
 
 				</div>
 
@@ -192,13 +192,9 @@ if ( have_posts() ) {
 	$thechurch = new WP_Query( $argsthechurch );
 	while ($thechurch->have_posts()) : $thechurch->the_post();
 
-		$about_us_image_de = get_field(about_us_image_de);
+		$about_us_image = get_field(about_us_image);
 		$about_us_text_de = get_field(about_us_text_de);
-		//
-		$about_us_image_en = get_field(about_us_image_en);
 		$about_us_text_en = get_field(about_us_text_en);
-		//
-		$about_us_image_es = get_field(about_us_image_es);
 		$about_us_text_es = get_field(about_us_text_es);
 
 	endwhile;
@@ -232,7 +228,7 @@ if ( have_posts() ) {
 	//
 	//
 	//
-	// Donate
+	// Donation
 	$argsthechurch = array(
 		'p' => 13,
 		'post_type' => 'pty_interface'
@@ -240,13 +236,9 @@ if ( have_posts() ) {
 	$thechurch = new WP_Query( $argsthechurch );
 	while ($thechurch->have_posts()) : $thechurch->the_post();
 
-		$donation_image_de = get_field(donation_image_de);
+		$donation_imagee = get_field(donation_image);
 		$donation_text_de = get_field(donation_text_de);
-		//
-		$donation_image_en = get_field(donation_image_en);
 		$donation_text_en = get_field(donation_text_en);
-		//
-		$donation_text_es = get_field(donation_image_es);
 		$donation_text_es = get_field(donation_text_es);
 
 	endwhile;
@@ -363,67 +355,32 @@ if ( have_posts() ) {
 
 
 					<div class="col-33 smallgroups-wraper-item">
-						<img class="smallgroups-image" src="images/smallgroups-english.jpg" />
+						<img class="smallgroups-image" src="<?php echo $small_groups_image_01; ?>" />
 						<h4 class="smallgroups-subtitle bold center">
-							English & German Smallgroup
+							<span class="translated-content lang-de"><?php echo $small_groups_title_de_01; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_title_en_01; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_title_es_01; ?></span>
 						</h4>
 						<p class="center">
-							Jeden Freitag 18:30Uhr am Fichtensraße 2 (Deutsch & English)
+							<span class="translated-content lang-de"><?php echo $small_groups_text_de_01; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_text_en_01; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_text_es_01; ?></span>
 						</p>
 					</div>
 
 
 
 					<div class="col-33 smallgroups-wraper-item">
-						<img class="smallgroups-image" src="images/smallgroups-baby.jpg" />
+						<img class="smallgroups-image" src="<?php echo $small_groups_image_02; ?>" />
 						<h4 class="smallgroups-subtitle bold center">
-							Mama-Papa-Kind
+							<span class="translated-content lang-de"><?php echo $small_groups_title_de_02; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_title_en_02; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_title_es_02; ?></span>
 						</h4>
 						<p class="center">
-								jeden Montag, 9:45 Uhr am Fichtenstr. 2 (Deutsch)
-						</p>
-					</div>
-
-
-
-
-					<div class="col-33 smallgroups-wraper-item">
-						<img class="smallgroups-image" src="images/smallgroups-spanish.jpg" />
-
-						<h4 class="smallgroups-subtitle bold center">
-							Grupo de Oración
-						</h4>
-						<p class="center">
-							Alle zwei Wochen (Donnerstag) am Bischofsweg 72/74 - Zschommler/Martinez (Español)
-						</p>
-
-					</div>
-
-
-
-
-					<div class="col-33 smallgroups-wraper-item">
-						<img class="smallgroups-image" src="images/smallgroups-young.jpg" />
-						<h4 class="smallgroups-subtitle bold center">
-							Youth Bibelstudy
-						</h4>
-						<p class="center">
-							Mittwoch 17:30Uhr - Wolfsgasse Internat 2. Etage (Deutsch & English & Español)
-						</p>
-					</div>
-
-
-
-
-
-
-					<div class="col-33 smallgroups-wraper-item">
-						<img class="smallgroups-image" src="images/smallgroups-young.jpg" />
-						<h4 class="smallgroups-subtitle bold center">
-							Youth Bibelstudy
-						</h4>
-						<p class="center">
-							Mittwoch 17:30Uhr - Wolfsgasse Internat 2. Etage (Deutsch & English & Español)
+							<span class="translated-content lang-de"><?php echo $small_groups_text_de_02; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_text_en_02; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_text_es_02; ?></span>
 						</p>
 					</div>
 
@@ -431,30 +388,68 @@ if ( have_posts() ) {
 
 
 					<div class="col-33 smallgroups-wraper-item">
-						<img class="smallgroups-image" src="images/smallgroups-chillout.jpg" />
-
+						<img class="smallgroups-image" src="<?php echo $small_groups_image_03; ?>" />
 						<h4 class="smallgroups-subtitle bold center">
-							Chill Out Time
+							<span class="translated-content lang-de"><?php echo $small_groups_title_de_03; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_title_en_03; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_title_es_03; ?></span>
 						</h4>
-						<span class="translated-content lang-de">
-							<p class="center">
-								Ab und zu ein cooles Event in der Stadt. (Alle Sprachen)
-							</p>
-						</span>
-						<span class="translated-content lang-en">
-							<p class="center">
-								From time to time some cool event in the city. (All languages)
-							</p>
-						</span>
-						<span class="translated-content lang-es">
-							<p class="center">
-								De vez en cuando algún evento genial en la ciudad. (Todos los idiomas)
-							</p>
-						</span>
+						<p class="center">
+							<span class="translated-content lang-de"><?php echo $small_groups_text_de_03; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_text_en_03; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_text_es_03; ?></span>
+						</p>
+					</div>
 
 
 
 
+					<div class="col-33 smallgroups-wraper-item">
+						<img class="smallgroups-image" src="<?php echo $small_groups_image_04; ?>" />
+						<h4 class="smallgroups-subtitle bold center">
+							<span class="translated-content lang-de"><?php echo $small_groups_title_de_04; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_title_en_04; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_title_es_04; ?></span>
+						</h4>
+						<p class="center">
+							<span class="translated-content lang-de"><?php echo $small_groups_text_de_04; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_text_en_04; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_text_es_04; ?></span>
+						</p>
+					</div>
+
+
+
+					<div class="col-33 smallgroups-wraper-item">
+						<img class="smallgroups-image" src="<?php echo $small_groups_image_05; ?>" />
+						<h4 class="smallgroups-subtitle bold center">
+							<span class="translated-content lang-de"><?php echo $small_groups_title_de_05; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_title_en_05; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_title_es_05; ?></span>
+						</h4>
+						<p class="center">
+							<span class="translated-content lang-de"><?php echo $small_groups_text_de_05; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_text_en_05; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_text_es_05; ?></span>
+						</p>
+					</div>
+
+
+
+
+					<div class="col-33 smallgroups-wraper-item">
+						<img class="smallgroups-image" src="<?php echo $small_groups_image_06; ?>" />
+						<h4 class="smallgroups-subtitle bold center">
+							<span class="translated-content lang-de"><?php echo $small_groups_title_de_06; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_title_en_06; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_title_es_06; ?></span>
+						</h4>
+						<p class="center">
+							<span class="translated-content lang-de"><?php echo $small_groups_text_de_06; ?></span>
+							<span class="translated-content lang-en"><?php echo $small_groups_text_en_06; ?></span>
+							<span class="translated-content lang-es"><?php echo $small_groups_text_es_06; ?></span>
+						</p>
+					</div>
 
 
 
@@ -509,42 +504,18 @@ if ( have_posts() ) {
 				<div class="col-wrapper">
 					<div class="col-40">
 						<div class="team-pic">
-							<img src="images/AboutUs.jpg" alt="Photo of the people from church together." />
+							<img src="<?php echo $about_us_image; ?>" alt="Photo of the people from church together." />
 						</div>
 					</div>
 					<div class="col-60">
 						<span class="translated-content lang-de">
-							<p>
-								Wir sind fast normale junge Menschen. Nur das wir erlebt haben, dass Gott kein philosophischer  Gedanke oder Energie ist, sondern ein Gegenüber mit dem wir in einer direkten Beziehung leben können.
-							</p>
-							<p>
-								Das ist zwar  "nur" Glauben, aber es  hat unser Leben verändert. Wir erleben wie Gott mit seiner Kraft direkt in unser Leben eingreift und durch uns in  der  Welt wirkt. Wir wollen dich von keiner  Ideologie überzeugen, sondern dir die Möglichkeit geben die Wahrheit von Jesus zu erleben,  durch dessen Kraft du von Ängsten, Verletzungen, Süchten und sonstigen Belastungen frei werden kannst.
-							</p>
-							<p class="bold">
-								Bist du kein Gläubiger? Mach dir keine Sorgen, du bist willkommen!
-							</p>
+							<?php echo $about_us_text_de; ?>
 						</span>
 						<span class="translated-content lang-en">
-							<p>
-								We are pretty ordinary young people. But God is not only a philosophical idea or a vague concept to us, but someone who is longing to get to know you and be known by you.
-							</p>
-							<p>
-								Faith has changed our life. Jesus Christ has helped us through difficult times in life and knowing Him is quite fun.
-							</p>
-							<p class="bold">
-								Are you not a believer? Don't worry, you are welcome!
-							</p>
+							<?php echo $about_us_text_en; ?>
 						</span>
 						<span class="translated-content lang-es">
-							<p>
-								Somos jóvenes del común, que  vivenciamos a Dios no como un pensamiento filosófico ni una energía, sino como alguien real con el cual  podemos experimentar una relación personal, la cual nos permite ser testigos permanentes, del actuar de Dios con su fuerza a diario en nuestra vida y a través de nosotros en el mundo.
-							</p>
-							<p>
-								Esto es lo que creemos y lo que ha transformado radicalmente nuestras vidas. No intentamos que creas en una ideología, sino que tengas la posibilidad de experimentar la verdad de Jesús en tu vida. Por su poder, puedes ser libre de temores, heridas en tu corazón, adicciones y todas aquellas cosas que hacen tu vida plana y sin sentido.
-							</p>
-							<p class="bold">
-								¿No eres un creyente? No te preocupes, eres bienvenido!
-							</p>
+							<?php echo $about_us_text_es; ?>
 						</span>
 
 
@@ -567,20 +538,15 @@ if ( have_posts() ) {
 
 
 
+
 				<span class="translated-content lang-de">
-					<p>
-						Wir sind in Neustadt in der Fichtenstraße 2, 01097 Dresden, neben der Ruine der St. Paulskirche.
-					</p>
+					<?php echo $where_text_de; ?>
 				</span>
 				<span class="translated-content lang-en">
-					<p>
-						We are in Neustad at Fichtenstraße 2, 01097 Dresden, beside the St. Paulo Church ruins.
-					</p>
+					<?php echo $where_text_en; ?>
 				</span>
 				<span class="translated-content lang-es">
-					<p>
-						Estamos en Neustadt en la dirección Fichtenstraße 2, 01097 Dresden, al lado de las ruinas de la iglesia St. Pauli.
-					</p>
+					<?php echo $where_text_es; ?>
 				</span>
 
 
@@ -606,18 +572,20 @@ if ( have_posts() ) {
 
 				<div class="col-wrapper">
 					<div class="col-60">
-						<img class="contact-photo" src="images/bibleoffer.jpg" alt="Photo of a bible and some books together"/>
+						<img class="contact-photo" src="<?php echo $onation_image; ?>" alt="Photo of a bible and some books together"/>
 					</div>
 					<div class="col-40 donation-wraper-text">
-						<p>
-							<b>Glauben Leben e.V.</b>
-							<br />IBAN: DE73 8505 0300 0221 1647 07
-							<br />BIC: OSDDDE81XXX
-							<br />Ostsächsische Sparkasse Dresden
-						</p>
+						<span class="translated-content lang-de">
+							<?php echo $donation_text_de; ?>
+						</span>
+						<span class="translated-content lang-en">
+							<?php echo $donation_text_en; ?>
+						</span>
+						<span class="translated-content lang-es">
+							<?php echo $donation_text_es; ?>
+						</span>
 					</div>
 				</div>
-
 
 			</div>
 		</section>
@@ -640,13 +608,19 @@ if ( have_posts() ) {
 
 				<div class="col-wrapper">
 					<div class="col-50 contact-infoitem">
-						<img class="contact-photo" src="images/contact-michael.jpg" alt="Photo Michael Schuber"/>
+						<img class="contact-photo" src="<?php echo $contact_image_michael; ?>" alt="Photo Michael Schuber"/>
 						<p class="contact-text">
-							<span class="translated-content lang-de">Michael Schubert  - Pfarrer</span>
-							<span class="translated-content lang-en">Michael Schubert  - Pastor</span>
-							<span class="translated-content lang-es">Michael Schubert  - Pastor</span>
-							<a class="contact-link" href="mailto:pfarrer.schubert@t-online.de">pfarrer.schubert@t-online.de </a>
+							<span class="translated-content lang-de"><?php echo $where_text_de; ?></span>
+							<span class="translated-content lang-en"><?php echo $where_text_de; ?></span>
+							<span class="translated-content lang-es"><?php echo $where_text_de; ?></span>
+							<a class="contact-link" href="mailto:<?php echo $contact_email_michael; ?>"><?php echo $where_text_de; ?></a>
 						</p>
+
+
+
+
+
+
 					</div>
 					<div class="col-50 contact-infoitem">
 						<img class="contact-photo" src="images/contact-tobias.jpg" alt="Photo Tobias and Nathali"/>
