@@ -54,7 +54,7 @@
 </div><!-- class="wrapper" -->
 
 
-<?php wp_head(); ?>
+<?php wp_footer(); ?>
 
 </body>
 
