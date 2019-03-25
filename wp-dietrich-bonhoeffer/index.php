@@ -13,6 +13,7 @@ if ( have_posts() ) {
 } // end if
 
 
+
 //
 //
 //
@@ -215,22 +216,48 @@ wp_reset_query();
 
 <section id="intro" class="intro site-section">
 	<div class="intro-wraper large-width-wrapper">
-
-
-
 		<ul id="main-slider">
-			<li>
-				<img src="<?php bloginfo('template_url'); ?>/content/slider_1.jpg" />
-			</li>
-			<li>
-				<img src="<?php bloginfo('template_url'); ?>/content/slider_4.jpg" />
-			</li>
-			<li>
-				<img src="<?php bloginfo('template_url'); ?>/content/slider_7.jpg" />
-			</li>
+
+			<?php
+			//
+			//
+			//
+			// Slider
+			$argsthechurch = array(
+				'post_type' => 'pty_slider'
+			);
+			$thechurch = new WP_Query( $argsthechurch );
+			while ($thechurch->have_posts()) : $thechurch->the_post();
+
+				echo '<li>';
+				echo '<img src="' . get_field(slider_image) . '" />';
+
+				if (get_field(with_content_box)) {
+					echo '<div class="slider-content">';
+
+					echo '<p class="slider-content-title">';
+					echo '<span class="translated-content lang-de">' . get_field(slider_title_de) . '</span>';
+					echo '<span class="translated-content lang-en">' . get_field(slider_title_en) . '</span>';
+					echo '<span class="translated-content lang-es">' . get_field(slider_title_es) . '</span>';
+					echo '</p>';
+
+					echo '<p class="slider-content-subtitle">';
+					echo '<span class="translated-content lang-de">' . get_field(slider_subtext_de) . '</span>';
+					echo '<span class="translated-content lang-en">' . get_field(slider_subtext_en) . '</span>';
+					echo '<span class="translated-content lang-es">' . get_field(slider_subtext_es) . '</span>';
+					echo '</p>';
+
+					echo '</div>';
+				}
+
+				echo '</li>';
+
+			endwhile;
+			wp_reset_query();
+			?>
+
+
 		</ul>
-
-
 	</div>
 </section>
 

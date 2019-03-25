@@ -38,16 +38,18 @@
         slideMargin:0,
         loop:true,
         speed: 700,
-        auto: true
+        auto: true,
+        pause: 10000
       });
       $("#home-story-cards").lightSlider({
         adaptiveHeight:false,
         item:1,
         slideMargin:0,
         controls: false,
-        loop:false,
-        speed: 400,
-        auto: true
+        loop:true,
+        speed: 500,
+        auto: true,
+        pause: 3000
       });
     });
   </script>
