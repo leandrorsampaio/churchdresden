@@ -17,6 +17,32 @@ if ( have_posts() ) {
 //
 //
 //
+// Bible Verse
+$argsthechurch = array(
+	'p' => 194,
+	'post_type' => 'pty_interface'
+);
+$thechurch = new WP_Query( $argsthechurch );
+while ($thechurch->have_posts()) : $thechurch->the_post();
+
+$bible_verse_text_de = get_field(bible_verse_text_de);
+$bible_verse_reference_de = get_field(bible_verse_reference_de);
+//
+$bible_verse_text_en = get_field(bible_verse_text_en);
+$bible_verse_reference_en = get_field(bible_verse_reference_en);
+//
+$bible_verse_text_es = get_field(bible_verse_text_es);
+$bible_verse_reference_es = get_field(bible_verse_reference_es);
+
+endwhile;
+wp_reset_query();
+
+
+
+
+//
+//
+//
 // The Church
 $argsthechurch = array(
 	'p' => 13,
@@ -265,64 +291,26 @@ wp_reset_query();
 
 
 
-<!--
-<section id="intro" class="intro site-section">
-	<div class="intro-wraper default-width-wrapper">
-		<div class="slider">
 
 
+<section id="bibleverse" class="smallgroups site-section">
+	<div class="smallgroups-wraper default-width-wrapper">
 
-			<div>
-				<img src="<?php bloginfo('template_url'); ?>/content/slider_1.jpg" />
-
-				<div class="slider-item title">
-					<div class="bibleverse">
-						<div class="bibleverse-text">
-							<span class="translated-content lang-de">Kommt zu mir, ihr alle, die ihr euch plagt und von eurer Last fast erdrückt werdet; ich werde sie euch abnehmen.</span>
-							<span class="translated-content lang-en">Come to me, all you who are weary and burdened, and I will give you rest.</span>
-							<span class="translated-content lang-es">Vengan a mí todos ustedes que están cansados y agobiados, y yo les daré descanso.</span>
-						</div>
-						<div class="bibleverse-name">
-							<span class="translated-content lang-de">Jesus</span>
-							<span class="translated-content lang-en">Jesus</span>
-							<span class="translated-content lang-es">Jesus</span>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-
-			<img src="<?php bloginfo('template_url'); ?>/content/slider_4.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/slider_7.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/slider_6.jpg" />
-
+		<div class="bibleverse">
+			<h3 class="bibleverse-text">
+				<span class="translated-content lang-de"><?php echo $bible_verse_text_de; ?></span>
+				<span class="translated-content lang-en"><?php echo $bible_verse_text_en; ?></span>
+				<span class="translated-content lang-es"><?php echo $bible_verse_text_es; ?></span>
+			</h3>
+			<p class="bibleverse-name">
+				<span class="translated-content lang-de"><?php echo $bible_verse_reference_de; ?></span>
+				<span class="translated-content lang-en"><?php echo $bible_verse_reference_en; ?></span>
+				<span class="translated-content lang-es"><?php echo $bible_verse_reference_es; ?></span>
+			</p>
 		</div>
-
 
 	</div>
 </section>
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
