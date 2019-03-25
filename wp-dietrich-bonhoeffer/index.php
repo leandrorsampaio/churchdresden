@@ -213,17 +213,34 @@ wp_reset_query();
 
 
 
+<section id="intro" class="intro site-section">
+	<div class="intro-wraper large-width-wrapper">
 
 
+
+		<ul id="main-slider">
+			<li>
+				<img src="<?php bloginfo('template_url'); ?>/content/slider_1.jpg" />
+			</li>
+			<li>
+				<img src="<?php bloginfo('template_url'); ?>/content/slider_4.jpg" />
+			</li>
+			<li>
+				<img src="<?php bloginfo('template_url'); ?>/content/slider_7.jpg" />
+			</li>
+		</ul>
+
+
+	</div>
+</section>
+
+
+
+
+
+<!--
 <section id="intro" class="intro site-section">
 	<div class="intro-wraper default-width-wrapper">
-
-
-
-
-
-
-
 		<div class="slider">
 
 
@@ -256,10 +273,31 @@ wp_reset_query();
 		</div>
 
 
-
-
 	</div>
 </section>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -459,18 +497,38 @@ wp_reset_query();
 			<span class="translated-content lang-es">La historia más bella de todos los tiempos</span>
 		</h3>
 
-
-
-		<div class="slider2">
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_01.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_02.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_03.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_04.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_05.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_06.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_07.jpg" />
-			<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_08.jpg" />
+		<div class="home-story-cards-wrapper">
+			<ul id="home-story-cards">
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_01.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_02.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_03.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_04.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_05.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_06.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_07.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('template_url'); ?>/content/salvationplan_08.jpg" />
+				</li>
+			</ul>
 		</div>
+
+
+
+
 
 	</div>
 </section>

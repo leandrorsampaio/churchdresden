@@ -13,11 +13,13 @@
 
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" />
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/lightslider.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/app.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/font-awesome.min.css" />
+  <link rel="stylesheet"  href="<?php bloginfo('template_url'); ?>/style/lightslider.css"/>
 
 
 
@@ -28,16 +30,27 @@
 
 
 
-
-	<script src="sss/sss.min.js"></script>
-	<script>
-	jQuery(function($) {
-		$('.slider').sss();
-	});
-	jQuery(function($) {
-		$('.slider2').sss();
-	});
-	</script>
+  <script>
+    $(document).ready(function() {
+      $("#main-slider").lightSlider({
+        adaptiveHeight:false,
+        item:1,
+        slideMargin:0,
+        loop:true,
+        speed: 700,
+        auto: true
+      });
+      $("#home-story-cards").lightSlider({
+        adaptiveHeight:false,
+        item:1,
+        slideMargin:0,
+        controls: false,
+        loop:false,
+        speed: 400,
+        auto: true
+      });
+    });
+  </script>
 
 
 </head>
@@ -144,7 +157,7 @@
 				<ul>
 					<li class="flag_de">
 						<span class="flag_link flag_link_de">
-							<img src="<?php bloginfo('template_url'); ?>/images/flag_de.png" alt="Flag German Language"/>
+							<img src="<?php bloginfo('template_url'); ?>/img/flag_de.png" alt="Flag German Language"/>
 							<span class="text">
 								German
 							</span>
@@ -152,7 +165,7 @@
 					</li>
 					<li class="flag_en">
 						<span class="flag_link flag_link_en">
-							<img src="<?php bloginfo('template_url'); ?>/images/flag_en.png" alt="Flag English Language"/>
+							<img src="<?php bloginfo('template_url'); ?>/img/flag_en.png" alt="Flag English Language"/>
 							<span class="text">
 								English
 							</span>
@@ -160,7 +173,7 @@
 					</li>
 					<li class="flag_es">
 						<span class="flag_link flag_link_es">
-							<img src="<?php bloginfo('template_url'); ?>/images/flag_es.png" alt="Flag Spanish Language"/>
+							<img src="<?php bloginfo('template_url'); ?>/img/flag_es.png" alt="Flag Spanish Language"/>
 							<span class="text">
 								Spanish
 							</span>
