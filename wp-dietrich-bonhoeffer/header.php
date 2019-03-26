@@ -90,8 +90,8 @@
 						<li>
 							<a href="#smallgroups">
 								<span class="translated-content lang-de">Kleine Gruppen</span>
-								<span class="translated-content lang-en">Small groups</span>
-								<span class="translated-content lang-es">Pequeños grupos</span>
+								<span class="translated-content lang-en">Small Groups</span>
+								<span class="translated-content lang-es">Pequeños Grupos</span>
 							</a>
 						</li>
 
@@ -105,7 +105,7 @@
 
 						<li>
 							<a href="#about">
-								<span class="translated-content lang-de">Über uns</span>
+								<span class="translated-content lang-de">Über Uns</span>
 								<span class="translated-content lang-en">About Us</span>
 								<span class="translated-content lang-es">Quem Somos</span>
 							</a>
@@ -113,9 +113,9 @@
 
 						<li>
 							<a href="#map">
-								<span class="translated-content lang-de">Wo wir sind</span>
-								<span class="translated-content lang-en">Where we are</span>
-								<span class="translated-content lang-es">Donde estamos</span>
+								<span class="translated-content lang-de">Wo Wir Sind</span>
+								<span class="translated-content lang-en">Where We Are</span>
+								<span class="translated-content lang-es">Donde Estamos</span>
 							</a>
 						</li>
 

@@ -256,6 +256,11 @@ wp_reset_query();
 			while ($thechurch->have_posts()) : $thechurch->the_post();
 
 				echo '<li>';
+
+				if(get_field(with_link)) {
+					echo '<a href="' . get_field(slider_link) . '">';
+				}
+
 				echo '<img src="' . get_field(slider_image) . '" />';
 
 				if (get_field(with_content_box)) {
@@ -274,6 +279,10 @@ wp_reset_query();
 					echo '</p>';
 
 					echo '</div>';
+				}
+
+				if(get_field(with_link)) {
+					echo '</a>';
 				}
 
 				echo '</li>';
@@ -592,7 +601,7 @@ wp_reset_query();
 		<h3 class="section-title">
 			<span class="translated-content lang-de">Wo wir sind</span>
 			<span class="translated-content lang-en">Where We Are</span>
-			<span class="translated-content lang-es">ES Not Translated</span>
+			<span class="translated-content lang-es">Donde Estamos</span>
 		</h3>
 
 
