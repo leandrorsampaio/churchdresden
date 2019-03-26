@@ -67,7 +67,7 @@
     <nav class="navigation">
 			<div class="navigation-wrapper">
 				<div class="logo">
-					<a href="index.html">
+					<a href="<?php echo get_home_url(); ?>">
 						Church Dresden
 					</a>
 				</div>
