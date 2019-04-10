@@ -686,8 +686,10 @@ p {
   }
   .intro-wraper {
     //box-shadow: -1px 10px 35px -4px rgba(102,102,102,0.64);
-    padding: 50px 0 0 0 !important;
     position: relative;
+    @media screen and (min-width: @tablet-min)  {
+      padding: 50px 0 0 0 !important;
+    }
     .intrologo {
       display: flex;
       height: 100%;
@@ -773,7 +775,9 @@ p {
 
 .smallgroups {
   .smallgroups-col {
-    margin-left: -30px;
+    @media screen and (min-width: @tablet-min) {
+      margin-left: -30px;
+    }
   }
   .smallgroups-wraper {
     .smallgroups-wraper-item {

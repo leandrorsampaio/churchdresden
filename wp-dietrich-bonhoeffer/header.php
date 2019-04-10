@@ -134,7 +134,7 @@
 							</a>
 						</li>
 						<li class="facebook">
-							<a href="https://www.facebook.com/GiAProjekt/" target="_blank">
+							<a href="https://www.facebook.com/ChurchDresden" target="_blank">
 								<i class="fa fa-facebook" aria-hidden="true"></i>
 							</a>
 						</li>
