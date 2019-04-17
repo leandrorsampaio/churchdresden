@@ -353,17 +353,17 @@ wp_reset_query();
 
 				<span class="translated-content lang-de">
 					<p class="bold center list-services-title">
-						Nächste Dienste:
+						Gottesdienste:
 					</p>
 				</span>
 				<span class="translated-content lang-en">
 					<p class="bold center list-services-title">
-						Next services:
+						Sunday Services:
 					</p>
 				</span>
 				<span class="translated-content lang-es">
 					<p class="bold center list-services-title">
-						Próximos servicios:
+						Servicios Dominicales:
 					</p>
 				</span>
 

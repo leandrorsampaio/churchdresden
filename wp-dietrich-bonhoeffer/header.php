@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138047783-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138047783-1');
+    </script>
+
   <?php wp_head(); ?>
 	<meta charset="UTF-8">
 	<title><?php echo wp_title('|',true,'right'); bloginfo('name'); ?></title>
