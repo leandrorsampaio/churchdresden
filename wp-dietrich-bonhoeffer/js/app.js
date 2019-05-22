@@ -168,7 +168,7 @@ function languageSelection() {
 $(window).on('load', function () {
 	//sectionSize();
 	languageStart();
-	smoothScroll();
+	//smoothScroll();
 	menuMobile();
 	languageMenuMobile();
 	languageSelection();
