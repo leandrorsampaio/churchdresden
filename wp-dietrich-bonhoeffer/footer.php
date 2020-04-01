@@ -9,9 +9,6 @@
       <div class="footerlogos-item logo-gge">
         <img src="<?php bloginfo('template_url'); ?>/img/logo-gge.jpg" alt="GGE logo German"/>
       </div>
-      <div class="footerlogos-item logo-ksp">
-        <img src="<?php bloginfo('template_url'); ?>/img/logo-ksp.png" alt="KSP logo German"/>
-      </div>
     </div>
 
 
