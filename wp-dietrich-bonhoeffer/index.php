@@ -238,7 +238,10 @@ wp_reset_query();
 
 
 
-
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+	<source src="content/bg.mp4" type="video/mp4">
+</video>
 
 <section id="intro" class="intro site-section">
 	<div class="intro-wraper large-width-wrapper">
